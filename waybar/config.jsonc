@@ -1,0 +1,51 @@
+{
+    "height": 34,
+    "spacing": 2,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory"
+    ],
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a, %d %b, %I:%M %p}"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "pulseaudio":{
+        "tooltip": true,
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+
+    },
+    "network": {
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 20
+    },
+    "cpu": {
+        "interval": 20,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 20,
+        "format": " {}%",
+        "max-length": 10,
+        "tooltip-format": "{used}Gb / {total}Gb"
+    }
+}
