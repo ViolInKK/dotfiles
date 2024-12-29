@@ -10,6 +10,7 @@
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 alias ls='ls --color=auto'
+alias la='ls -laFh'
 alias grep='grep --color=auto'
 alias fetch='fastfetch'
 alias rm='rm -iv'
